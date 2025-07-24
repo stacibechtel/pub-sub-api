@@ -11,8 +11,8 @@
 PUBSUB_HOST: api.pubsub.salesforce.com
 # Pub/Sub API Host
 PUBSUB_PORT: 7443
-# Your Salesforce Login URL
-LOGIN_URL: null
+# Your Salesforce Login URL -- this needs to be the instance_url
+LOGIN_URL: https://sp1714492846041.my.salesforce.com/
 
 # For authentication, you can use either username/password or accessToken/tenantId types.
 # Either one of the combinations is required. Please specify `null` values to the unused type.
@@ -21,15 +21,15 @@ USERNAME: null
 # Your Salesforce Password
 PASSWORD: null
 # Your Salesforce org Tenant ID
-TENANT_ID: null
+TENANT_ID: 00Dam00000I4QPl
 # Your Salesforce Session Token
-ACCESS_TOKEN: null
+ACCESS_TOKEN: <token_from_token_service>
 
 # =========================
 # Optional Configurations:
 # =========================
 # Topic to publish/subscribe to (default: /event/Order_Event__e)
-TOPIC: null
+TOPIC: /event/BYOC_Outbound_Event__e
 # Number of Events to publish in single or separate batches (default: 5)
 # Used only by PublishStream.java
 NUMBER_OF_EVENTS_TO_PUBLISH: null
@@ -38,7 +38,7 @@ NUMBER_OF_EVENTS_TO_PUBLISH: null
 # Used only by PublishStream.java
 SINGLE_PUBLISH_REQUEST: null
 # Number of events to subscribe to in each FetchRequest/ManagedFetchRequest (default: 5)
-NUMBER_OF_EVENTS_IN_FETCHREQUEST: null
+NUMBER_OF_EVENTS_IN_FETCHREQUEST: 5
 # ReplayPreset (Accepted Values: {EARLIEST, LATEST (default), CUSTOM})
 REPLAY_PRESET: null
 # Replay ID in ByteString
